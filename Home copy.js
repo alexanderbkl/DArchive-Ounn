@@ -63,7 +63,7 @@ import { transform } from "streaming-iterables";*/
 import { FloatingMenu } from "react-native-floating-action-menu";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import config from "./config";
-import { Web3Storage, File } from "web3.storage";
+import { Web3Storage, File } from 'web3.storage/dist/bundle.esm.min.js'
 import copy from "copy-to-clipboard";
 
 let mutexFoto = false;

@@ -153,7 +153,7 @@ const Settings = ({ route, navigation }) => {
               DArchive
             </Text>
           }{" "}
-          a decentralized storage service developed by Vincenzo Aiello. It is
+          a decentralized storage service. It is
           based on the use of{" "}
           {
             <Text style={{ color: "#ff5c5c", fontWeight: "bold" }}>
@@ -194,115 +194,6 @@ const Settings = ({ route, navigation }) => {
           . Files are encrypted using the AES algorithm and their security is
           based on the selected password.{"\n"}Enjoy it!😁
         </Text>
-
-        {/*Testo Donate */}
-        <Text
-          style={{
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "20px",
-            marginTop: "5%",
-          }}
-        >
-          Donate
-        </Text>
-
-        {/*Pulsante dona */}
-        <TouchableOpacity
-          style={{
-            marginTop: hp("3%"),
-            marginBottom: "3%",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          onPress={async () => {
-            let pay = window.open();
-            pay.location.href =
-              "https://www.paypal.com/donate/?hosted_button_id=WZV4EMC2W4VJA";
-          }}
-        >
-          <Image
-            style={{ width: "260px", height: "50px" }}
-            source={{ uri: require("./assets/PaypalIcon.svg") }}
-          ></Image>
-        </TouchableOpacity>
-
-        <View
-          style={{
-            width: "100%",
-            alignItems: "center",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          {/*Pulsante dona bitcoin */}
-          <TouchableOpacity
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            onPress={async () => {
-              let pay = window.open();
-              pay.location.href =
-                "https://www.bitcoinqrcodemaker.com/pay/?type=2&style=bitcoin&address=bc1q55melfnktuyzjqqygmpzn2urar8sr7vgkzct57";
-            }}
-          >
-            <Image
-              style={{
-                width: winSize.width > 900 ? "50px" : "40px",
-                height: winSize.width > 900 ? "50px" : "40px",
-                resizeMode: "cover",
-              }}
-              source={{ uri: require("./assets/btc.svg.png") }}
-            ></Image>
-          </TouchableOpacity>
-
-          {/*Pulsante dona eth */}
-          <TouchableOpacity
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: "2%",
-              marginRight: "2%",
-            }}
-            onPress={async () => {
-              let pay = window.open();
-              pay.location.href =
-                "https://www.bitcoinqrcodemaker.com/pay/?type=2&style=ethereum&address=0x412a9128F56F1004BbE2de093C8ea6534d70620b";
-            }}
-          >
-            <Image
-              style={{
-                width: winSize.width > 900 ? "50px" : "40px",
-                height: winSize.width > 900 ? "50px" : "40px",
-                resizeMode: "contain",
-              }}
-              source={{ uri: require("./assets/eth.svg.png") }}
-            ></Image>
-          </TouchableOpacity>
-
-          {/*Pulsante dona doge */}
-          <TouchableOpacity
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            onPress={async () => {
-              let pay = window.open();
-              pay.location.href =
-                "https://www.bitcoinqrcodemaker.com/pay/?type=2&style=dogecoin&address=DE2QmoFh1Z98F5pZYEsMf4wYT8mjMapwD6";
-            }}
-          >
-            <Image
-              style={{
-                width: winSize.width > 900 ? "50px" : "40px",
-                height: winSize.width > 900 ? "50px" : "40px",
-                resizeMode: "cover",
-              }}
-              source={{ uri: require("./assets/dogecoin.svg") }}
-            ></Image>
-          </TouchableOpacity>
-        </View>
 
         {/*Testo follow the project on */}
         <Text

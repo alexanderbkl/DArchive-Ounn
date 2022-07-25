@@ -16,10 +16,7 @@ import {
 } from "react-native-responsive-screen";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-const {
-  initializeAppCheck,
-  ReCaptchaV3Provider,
-} = require("firebase/app-check");
+
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import config from "./config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -41,10 +38,7 @@ const LogIn = ({ navigation }) => {
   //inizializzo firebase
   //il provider recaptcha serve per rifiutare richieste che provengono da siti al di fuori di darchive
   const app = initializeApp(config.firebaseConfig);
-  const appcheck = initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider(config.ReCaptchaV3ProviderToken),
-    isTokenAutoRefreshEnabled: true,
-  });
+
   const auth = getAuth(app);
 
   let [email, setEmail] = React.useState("");
@@ -110,7 +104,6 @@ const LogIn = ({ navigation }) => {
         }}
         source={{ uri: require("./assets/logo.png") }}
       ></Image>
-
       <View
         style={{
           marginTop: hp("1%"),

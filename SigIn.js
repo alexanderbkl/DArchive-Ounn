@@ -42,7 +42,7 @@ const SigIn = ({ route, navigation }) => {
   //prendo auth firebase inizializzato in login
   const auth = route.params.auth;
 
-  //inizializzo databse firebase
+  //inizializzo databsee firebase
   const db = getFirestore();
 
   let [nome, setNome] = React.useState("");
